@@ -12,13 +12,16 @@ body {
     height: 500px;
     background-color:aquamarine;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     flex-wrap: wrap;
-    gap: 10px;
 }
 
-/* .grid-container div {
-    height: 100px;
+.grid-container div {
     background-color: orange;
-} */
+}
+
+/* THIS IS TO VISUALLY TRACK CURSOR POSITION; REMOVE LATER */
+.grid-container div:hover {
+    background-color: pink;
+}

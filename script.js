@@ -14,6 +14,8 @@ function createGridDivs(num) {
     for (let i = 0; i < num*num; i++) {
         const gridDiv = document.createElement("div");
         gridContainer.appendChild(gridDiv);
+        gridDiv.style.width = `calc(100% / ${num})`;
+        gridDiv.style.height = `calc(100% / ${num})`;
     }
 }
 

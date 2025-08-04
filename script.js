@@ -1,6 +1,7 @@
 // PSEUDOCODE (use as code guide and rework as comments later)
-// Access DOM element node for the grid container
+// Access DOM element nodes for the grid container and button
 const gridContainer = document.querySelector(".grid-container");
+const newGridBtn = document.querySelector(".new-grid-btn");
 
 // Function create grid
     // Pass In: div num

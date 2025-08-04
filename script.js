@@ -23,7 +23,7 @@ function changeDivColour(el) {
 
 function createNewGrid() {
     let gridSize = prompt("Enter the number of squares per side (between 1 and 100): ");
-    while (gridSize < 0 || gridSize > 100) {
+    while (gridSize <= 0 || gridSize > 100) {
         gridSize = prompt("Please enter a number between 1 and 100: ");
     }
     deleteGridDivs();

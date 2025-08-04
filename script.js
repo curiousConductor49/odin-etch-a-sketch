@@ -16,6 +16,7 @@ function createGridDivs(num) {
         gridContainer.appendChild(gridDiv);
         gridDiv.style.width = `calc(100% / ${num})`;
         gridDiv.style.height = `calc(100% / ${num})`;
+        gridDiv.addEventListener("mouseenter", () => {changeDivColour(gridDiv)});
     }
 }
 
@@ -26,6 +27,10 @@ createGridDivs(16);
     // Action: CHANGE the div colours when moused over using event listeners and DOM attributes
     // Pass Out: n/a
 // Endfunction
+
+function changeDivColour(el) {
+    el.style.backgroundColor = "purple";
+}
 
 // Function create new grid w/ user input
     // Pass In: div num

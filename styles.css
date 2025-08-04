@@ -20,8 +20,3 @@ body {
 .grid-container div {
     background-color: orange;
 }
-
-/* THIS IS TO VISUALLY TRACK CURSOR POSITION; REMOVE LATER */
-.grid-container div:hover {
-    background-color: pink;
-}

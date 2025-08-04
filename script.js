@@ -1,4 +1,6 @@
 // PSEUDOCODE (use as code guide and rework as comments later)
+// Access DOM element node for the grid container
+const gridContainer = document.querySelector(".grid-container");
 
 // Function create grid
     // Pass In: div num
@@ -7,6 +9,15 @@
         // CREATE a grid of div elements inside the existing div container in the HTML using a loop
     // Pass Out: n/a
 // Endfunction
+
+function createGridDivs(num) {
+    for (let i = 0; i < num*num; i++) {
+        const gridDiv = document.createElement("div");
+        gridContainer.appendChild(gridDiv);
+    }
+}
+
+createGridDivs(16);
 
 // Function change div colour
     // Pass In: n/a

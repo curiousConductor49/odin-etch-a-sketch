@@ -1,15 +1,6 @@
-// PSEUDOCODE (use as code guide and rework as comments later)
 // Access DOM element nodes for the grid container and button
 const gridContainer = document.querySelector(".grid-container");
 const newGridBtn = document.querySelector(".new-grid-btn");
-
-// Function create grid
-    // Pass In: div num
-    // Action:
-        // ACCESS DOM 
-        // CREATE a grid of div elements inside the existing div container in the HTML using a loop
-    // Pass Out: n/a
-// Endfunction
 
 function createGridDivs(num) {
     for (let i = 0; i < num*num; i++) {
@@ -21,24 +12,23 @@ function createGridDivs(num) {
     }
 }
 
-createGridDivs(16);
-
-// Function change div colour
-    // Pass In: n/a
-    // Action: CHANGE the div colours when moused over using event listeners and DOM attributes
-    // Pass Out: n/a
-// Endfunction
+function deleteGridDivs() {
+    const gridChildren = [...gridContainer.querySelectorAll("div")];
+    gridChildren.map((child) => {gridContainer.removeChild(child)});
+}
 
 function changeDivColour(el) {
     el.style.backgroundColor = "purple";
 }
 
-// Function create new grid w/ user input
-    // Pass In: div num
-    // Action: 
-        // OBTAIN user input
-        // REMOVE existing grid of divs inside div container from DOM
-        // CREATE new grid of divs using user input
-        // ATTACH to event listener on button
-    // Pass Out: n/a
-// Endfunction
+function createNewGrid() {
+    let gridSize = prompt("Enter the number of squares per side (between 1 and 100): ");
+    while (gridSize < 0 || gridSize > 100) {
+        gridSize = prompt("Please enter a number between 1 and 100: ");
+    }
+    deleteGridDivs();
+    createGridDivs(gridSize);
+}
+
+createGridDivs(16);
+newGridBtn.addEventListener("click", () => createNewGrid());

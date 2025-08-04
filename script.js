@@ -2,6 +2,7 @@
 const gridContainer = document.querySelector(".grid-container");
 const newGridBtn = document.querySelector(".new-grid-btn");
 
+// Create a function to create divs inside grid container
 function createGridDivs(dimension) {
     for (let i = 0; i < dimension*dimension; i++) {
         const gridDiv = document.createElement("div");
@@ -12,15 +13,18 @@ function createGridDivs(dimension) {
     }
 }
 
+// Create a function to delete divs inside grid container
 function deleteGridDivs() {
     const gridChildren = [...gridContainer.querySelectorAll("div")];
     gridChildren.map((child) => {gridContainer.removeChild(child)});
 }
 
+// Create a function to change background colours of divs inside grid container
 function changeDivColour(el) {
     el.style.backgroundColor = "#06D6A0";
 }
 
+// Create a function to create a new grid
 function createNewGrid() {
     let gridSize = prompt("Enter the number of squares per side (between 1 and 100): ");
     while (gridSize <= 0 || gridSize > 100) {

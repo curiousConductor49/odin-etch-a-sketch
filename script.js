@@ -2,12 +2,12 @@
 const gridContainer = document.querySelector(".grid-container");
 const newGridBtn = document.querySelector(".new-grid-btn");
 
-function createGridDivs(num) {
-    for (let i = 0; i < num*num; i++) {
+function createGridDivs(dimension) {
+    for (let i = 0; i < dimension*dimension; i++) {
         const gridDiv = document.createElement("div");
         gridContainer.appendChild(gridDiv);
-        gridDiv.style.width = `calc(100% / ${num})`;
-        gridDiv.style.height = `calc(100% / ${num})`;
+        gridDiv.style.width = `calc(100% / ${dimension})`;
+        gridDiv.style.height = `calc(100% / ${dimension})`;
         gridDiv.addEventListener("mouseenter", () => {changeDivColour(gridDiv)});
     }
 }
@@ -18,7 +18,7 @@ function deleteGridDivs() {
 }
 
 function changeDivColour(el) {
-    el.style.backgroundColor = "purple";
+    el.style.backgroundColor = "#06D6A0";
 }
 
 function createNewGrid() {

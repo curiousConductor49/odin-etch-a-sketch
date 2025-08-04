@@ -4,8 +4,42 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    gap: 10px;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.2rem;
+}
+
+h1 .first-word {
+    color:#118AB2;
+}
+
+h1 .second-word {
+    color:#EF476F;
+}
+
+h1 .third-word {
+    color:#FFD166;
+}
+
+.new-grid-btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #EF476F;
+    color: #FAF3DD;
+    padding: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.new-grid-btn:hover {
+    background-color: #FAF3DD;
+    color: #118AB2;
 }
 
 .grid-container {
@@ -13,24 +47,9 @@ body {
     height: 500px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .grid-container div {
     background-color: #FFD166;
-}
-
-.new-grid-btn {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2.3rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #EF476F;
-    color: #FAF3DD;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.new-grid-btn:hover {
-    background-color: #FAF3DD;
-    color: #118AB2;
 }
